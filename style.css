@@ -58,11 +58,11 @@ h1 {
     flex-direction: column;
 }
 
-.container>.raw {
+.container>.row {
     flex: 1;
 }
 
-.container>.raw>div {
+.container>.row>div {
     flex: 1;
     border: 1px solid var(--gridDarkColor);
 }
