@@ -15,7 +15,9 @@
 /* flexboxes */
 body,
 .wrapper,
-nav {
+nav,
+.container,
+.raw {
     display: flex;
 }
 
@@ -45,4 +47,22 @@ nav img {
 h1 {
     padding: 0.5em;
     font-size: 1.5em;
+}
+
+/* grid container */
+.container {
+    background-color: var(--gridLightColor);
+    border: 2px solid var(--borderColor);
+    width: 90vh;
+    height: 90vh;
+    flex-direction: column;
+}
+
+.container>.raw {
+    flex: 1;
+}
+
+.container>.raw>div {
+    flex: 1;
+    border: 1px solid var(--gridDarkColor);
 }
