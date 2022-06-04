@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    --bgColor: #c0dbff;
+    --borderColor: #0095ff;
+    --gridLightColor: #ffffff;
+    --gridDarkColor: #2a2a2a;
+}
+
+/* flexboxes */
+body,
+.wrapper {
+    display: flex;
+}
+
+body {
+    background-color: var(--bgColor);
+    justify-content: center;
+}
+
+.wrapper {
+    flex-direction: column;
+}
