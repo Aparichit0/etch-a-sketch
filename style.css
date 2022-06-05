@@ -68,6 +68,20 @@ h1 {
     border: 1px solid var(--gridDarkColor);
 }
 
+/* thinner grid */
+.container>.row>div {
+    border-top: none;
+    border-left: none;
+}
+
+.container>.row:last-child>div {
+    border-bottom: none;
+}
+
+.container>.row>div:last-child {
+    border-right: none;
+}
+
 /* paint black */
 .black {
     background-color: var(--blackPaint);
