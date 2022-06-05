@@ -18,3 +18,13 @@ rows.forEach((div) => {
     div.appendChild(column);
   }
 });
+
+//start painting when mouseover
+const pixels = document.querySelectorAll(".column");
+pixels.forEach((block) => {
+  block.addEventListener("mouseover", paint);
+});
+
+function paint() {
+  this.classList.add("black"); //blackpaint
+}

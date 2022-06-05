@@ -6,10 +6,11 @@
 
 :root {
     font-family: 'Courier New', Courier, monospace;
-    --bgColor: #c0dbff;
+    --bgColor: #cce2ff;
     --borderColor: #0095ff;
     --gridLightColor: #ffffff;
-    --gridDarkColor: #2a2a2a;
+    --gridDarkColor: #b3b3b3;
+    --blackPaint: #000000;
 }
 
 /* flexboxes */
@@ -65,4 +66,9 @@ h1 {
 .container>.row>div {
     flex: 1;
     border: 1px solid var(--gridDarkColor);
+}
+
+/* paint black */
+.black {
+    background-color: var(--blackPaint);
 }
