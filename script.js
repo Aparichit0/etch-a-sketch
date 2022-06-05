@@ -1,6 +1,10 @@
 const rowCount = 16; //initial value for testing
 const columnCount = rowCount;
 
+//reload button
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
+
 // create rows
 const gridContainer = document.querySelector(".container");
 for (i = 0; i < rowCount; i++) {
