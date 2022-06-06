@@ -81,8 +81,3 @@ h1 {
 .container>.row>div:last-child {
     border-right: none;
 }
-
-/* paint black */
-.black {
-    background-color: var(--blackPaint);
-}
