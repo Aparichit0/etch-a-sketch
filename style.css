@@ -9,8 +9,8 @@
     --bgColor: #cce2ff;
     --borderColor: #0095ff;
     --gridLightColor: #ffffff;
-    --gridDarkColor: #b3b3b3;
-    --blackPaint: #000000;
+    --gridDarkColor: #cccccc;
+    --blackPaint: #333333;
 }
 
 /* flexboxes */
