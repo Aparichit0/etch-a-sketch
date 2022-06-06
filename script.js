@@ -51,9 +51,7 @@ function updatePaint(pixel) {
 function toRGBA(color, alphaStrength = 0.1) {
   if (isRGBA(color)) return color; //return if it's already rgba
   if (!isRGBA(color)) {
-    let rgbaColor = color
-      .replace("rgb", "rgba")
-      .replace(")", `, ${alphaStrength})`);
+    let rgbaColor = color.replace("rgb", "rgba").replace(")", ", 0.0)");
     return rgbaColor;
   }
 }
