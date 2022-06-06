@@ -37,7 +37,7 @@ function paint() {
     return; //stop after one cycle
   if (!this.classList.contains("initialColor")) {
     this.classList.add("initialColor");
-    this.style.backgroundColor = "rgb(0, 0, 0)"; //initial color
+    this.style.backgroundColor = colorPick; //selected color
   }
   updatePaint(this);
 }
@@ -67,4 +67,12 @@ function isRGBA(testColor) {
   let testColorString = testColor.slice(0, 4);
   if (testColorString != "rgba") return false;
   return true;
+}
+
+//color picker
+const color = document.querySelector("#colorPicker");
+color.addEventListener("input", pickColor);
+let colorPick = "#000000"; //initial color
+function pickColor() {
+  colorPick = this.value;
 }
