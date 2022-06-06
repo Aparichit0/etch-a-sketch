@@ -45,18 +45,18 @@ function updatePaint(pixel) {
   alpha += 0.1;
   let newColor = pixColor.replace(alphaString, alpha);
   pixel.style.backgroundColor = newColor;
-  console.log(pixel.style.backgroundColor);
 }
 
-function toRGBA(color, alphaStrength = 0.1) {
-  if (isRGBA(color)) return color; //return if it's already rgba
+//rgb color string to rgba color string
+function toRGBA(color) {
+  if (isRGBA(color)) return color; //return existing
   if (!isRGBA(color)) {
     let rgbaColor = color.replace("rgb", "rgba").replace(")", ", 0.0)");
     return rgbaColor;
   }
 }
 
-// check if it's rgba color
+// check if it's rgba color string
 function isRGBA(testColor) {
   let testColorString = testColor.slice(0, 4);
   if (testColorString != "rgba") return false;
