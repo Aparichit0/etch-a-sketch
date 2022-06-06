@@ -18,7 +18,8 @@ body,
 .wrapper,
 nav,
 .container,
-.row {
+.row,
+.colorSelection {
     display: flex;
 }
 
@@ -80,4 +81,8 @@ h1 {
 
 .container>.row>div:last-child {
     border-right: none;
+}
+
+.colorSelection {
+    align-items: center;
 }
