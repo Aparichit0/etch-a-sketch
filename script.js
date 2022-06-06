@@ -30,12 +30,18 @@ pixels.forEach((block) => {
 });
 
 function paint() {
+  if (
+    this.classList.contains("initialColor") &&
+    !isRGBA(this.style.backgroundColor)
+  )
+    return; //stop after one cycle
   if (!this.classList.contains("initialColor")) {
     this.classList.add("initialColor");
     this.style.backgroundColor = "rgb(0, 0, 0)"; //initial color
   }
   updatePaint(this);
 }
+
 // update color
 function updatePaint(pixel) {
   let pixColor = pixel.style.backgroundColor;
