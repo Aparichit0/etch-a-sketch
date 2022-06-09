@@ -89,3 +89,12 @@ function rgbValue(color) {
   }
   return colorValue;
 }
+
+function hexToRGB(color) {
+  if (!(color.slice(0, 1) == "#" && color.length == 7)) return; //abort if not valid format
+  //numbers with "0x" prefix are regarded as hexadecimal and is auto converted to decimal
+  const r = parseInt("0x" + color.slice(1, 3));
+  const g = parseInt("0x" + color.slice(3, 5));
+  const b = parseInt("0x" + color.slice(5, 7));
+  return `rgb(${r}, ${g}, ${b})`;
+}
