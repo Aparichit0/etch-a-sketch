@@ -72,9 +72,9 @@ function isRGBA(testColor) {
 //color picker
 const color = document.querySelector("#colorPicker");
 color.addEventListener("input", pickColor);
-let colorPick = "#000000"; //initial color
+let colorPick = "rgb(0, 0, 0)"; //initial color
 function pickColor() {
-  colorPick = this.value;
+  colorPick = hexToRGB(this.value); //convert to rgb insted of hex
 }
 
 function rgbValue(color) {
