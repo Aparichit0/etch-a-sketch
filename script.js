@@ -45,6 +45,10 @@ function paint() {
 // update color
 function updatePaint(pixel) {
   let pixColor = pixel.style.backgroundColor;
+  if (rgbValue(pixColor) != rgbValue(colorPick)) {
+    //replace color if it's has diffrent rgb values
+    pixColor = colorPick;
+  }
   pixColor = toRGBA(pixColor);
   let alphaString = pixColor.slice(-4, -1); //get alpha value
   let alpha = parseFloat(alphaString);
