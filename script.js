@@ -76,3 +76,16 @@ let colorPick = "#000000"; //initial color
 function pickColor() {
   colorPick = this.value;
 }
+
+function rgbValue(color) {
+  if (!isRGBA(color)) {
+    colorValue = color.replace("rgb(", ""); //remove head
+    colorValue = colorValue.replace(")", ""); //remove tail
+  }
+
+  if (isRGBA(color)) {
+    colorValue = color.replace("rgba(", ""); //remove head
+    colorValue = colorValue.replace(/,\s...\)/, ""); //remove tail ["," followed by space(\s),then 3 ch(...) & ")" ]
+  }
+  return colorValue;
+}
