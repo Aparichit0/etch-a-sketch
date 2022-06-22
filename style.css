@@ -52,6 +52,10 @@ h1 {
     font-size: 1.5em;
 }
 
+.userSelection {
+    align-items: center;
+}
+
 /* grid container */
 .container {
     background-color: var(--gridLightColor);
@@ -75,12 +79,12 @@ h1 {
     }
 }
 
-.container>.row {
+.container>.row,
+.container>.row>div {
     flex: 1;
 }
 
 .container>.row>div {
-    flex: 1;
     border: 1px solid var(--gridDarkColor);
 }
 
@@ -98,10 +102,7 @@ h1 {
     border-right: none;
 }
 
-.userSelection {
-    align-items: center;
-}
-
+/* footer section */
 footer {
     align-self: center;
     margin-top: 1rem;
