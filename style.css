@@ -84,7 +84,7 @@ h1 {
     flex: 1;
 }
 
-.container>.row>div {
+.gridLine {
     border: 1px solid var(--gridDarkColor);
 }
 

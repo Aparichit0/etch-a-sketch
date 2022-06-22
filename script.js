@@ -1,5 +1,14 @@
 gridGen(16); //initial grid of 16x16 size
 
+//gridLine button
+const gridLine = document.querySelector("#gridLine");
+gridLine.addEventListener("click", () => {
+  const gridBoxes = document.querySelectorAll("div.column");
+  gridBoxes.forEach((box) => {
+    box.classList.toggle("gridLine");
+  });
+});
+
 //reload button
 const reload = document.querySelector("#reload");
 reload.addEventListener("click", () => document.location.reload());
