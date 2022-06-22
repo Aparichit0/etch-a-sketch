@@ -1,5 +1,4 @@
-const rowCount = 16; //initial value for testing
-const columnCount = rowCount;
+gridGen(16); //initial grid of 16x16 size
 
 //reload button
 const reload = document.querySelector("#reload");
@@ -23,11 +22,38 @@ rows.forEach((div) => {
   }
 });
 
-//start painting when mouseover
-const pixels = document.querySelectorAll(".column");
-pixels.forEach((block) => {
-  block.addEventListener("mouseover", paint);
-});
+function rowGen(count) {
+  const gridContainer = document.querySelector(".container");
+  gridContainer.innerHTML = ""; //reset
+  // create rows
+  for (i = 0; i < count; i++) {
+    const row = document.createElement("div");
+    row.classList.add("row");
+    gridContainer.appendChild(row);
+  }
+}
+
+function coloumnGen(count) {
+  const rows = document.querySelectorAll(".row");
+  // create colums
+  rows.forEach((div) => {
+    for (i = 0; i < count; i++) {
+      const column = document.createElement("div");
+      column.classList.add("column");
+      div.appendChild(column);
+    }
+  });
+}
+
+function gridGen(gridSize) {
+  rowGen(gridSize);
+  coloumnGen(gridSize);
+  //start painting when mouseover
+  const pixels = document.querySelectorAll(".column");
+  pixels.forEach((block) => {
+    block.addEventListener("mouseover", paint);
+  });
+}
 
 function paint() {
   if (
