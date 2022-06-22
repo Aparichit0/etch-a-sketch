@@ -85,3 +85,8 @@ h1 {
 .userSelection {
     align-items: center;
 }
+
+footer {
+    align-self: center;
+    margin-top: 1rem;
+}
