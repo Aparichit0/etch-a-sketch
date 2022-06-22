@@ -89,16 +89,16 @@ h1 {
 }
 
 /* thinner grid */
-.container>.row>div {
+.container>.row>div.gridLine {
     border-top: none;
     border-left: none;
 }
 
-.container>.row:last-child>div {
+.container>.row:last-child>div.gridLine {
     border-bottom: none;
 }
 
-.container>.row>div:last-child {
+.container>.row>div.gridLine:last-child {
     border-right: none;
 }
 
