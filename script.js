@@ -17,6 +17,7 @@ reload.addEventListener("click", () => document.location.reload());
 const resize = document.querySelector("#resizeGrid");
 resize.addEventListener("click", () => {
   let newSize = prompt("new grid size?\n(max: 100)", 16);
+  if (newSize === null) return; //no change
   if (newSize > 100) {
     alert("Warning!\nmax grid size: 100");
     newSize = 100;
